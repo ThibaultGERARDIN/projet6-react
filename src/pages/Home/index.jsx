@@ -1,13 +1,11 @@
-import './styles/Home.css';
+import '../../styles/Home.css';
 
 function Home() {
   return (
-    <div className="App">
-      <header className="App-header">
+    <div className="Home">
         <p>
           Page d'accueil
         </p>
-      </header>
     </div>
   );
 }
