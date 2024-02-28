@@ -2,3 +2,16 @@
 @import '../imports/mixins';
 
 /* styles pour la page erreur 404 */
+
+.Error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 139px;
+  padding: 139px 0;
+  a {
+    color: black;
+    font-size: $normal;
+    font-weight: $regular;
+  }
+}

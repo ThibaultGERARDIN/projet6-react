@@ -2,3 +2,20 @@
 @import '../imports/mixins';
 
 /* styles du header */
+
+.Header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  nav {
+    display: flex;
+    gap: 57px;
+    a {
+      text-decoration: none;
+      color: black;
+      font-size: $medium;
+      font-weight: $regular;
+    }
+  }
+}

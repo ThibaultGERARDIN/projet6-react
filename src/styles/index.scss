@@ -5,6 +5,36 @@
 body {
   margin: auto;
   font-family: 'Montserrat', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  max-width: 1240px;
+  gap: 50px;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding: 45px 0 0 0;
+}
+
+h1 {
+  font-size: $biggest;
+  font-weight: $bold;
+  color: white;
+  text-shadow:
+    -1px 1px 0 #000,
+    1px 1px 0 #000,
+    1px -1px 0 #000,
+    -1px -1px 0 #000;
+}
+
+h2 {
+  font-size: $big;
+  font-weight: $regular;
+  color: $main-color;
+}
+
+h3 {
+  font-size: $normal;
+  font-weight: $bold;
+  color: white;
 }

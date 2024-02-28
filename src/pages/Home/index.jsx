@@ -4,7 +4,9 @@ import Card from '../../components/Card'
 function Home() {
   return (
     <div className="Home">
-      <div className="Home-banner">Chez vous, partout et ailleurs</div>
+      <div className="Home-banner">
+        <h1>Chez vous, partout et ailleurs</h1>
+      </div>
       <div className="Home-cards">
         <Card />
         <Card />
