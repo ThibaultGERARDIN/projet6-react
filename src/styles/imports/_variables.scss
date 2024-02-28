@@ -1,0 +1,28 @@
+// colors
+$main-color: #ff6060;
+$secondary-color: #f6f6f6;
+$star-color: #e3e3e3;
+$gradient: linear-gradient(
+  180deg,
+  rgba(255, 255, 255, 0) 0%,
+  rgba(10, 10, 10, 0) 42%,
+  rgba(4, 4, 4, 0.205) 99.99%,
+  rgba(0, 0, 0, 0.5) 100%
+);
+
+$text-white: #ffffff;
+$text-red: #ff6060;
+$text-black: #000000;
+
+// font properties
+
+$bold: 700;
+$normal: 500;
+$light: 400;
+
+$biggest: 48px;
+$big: 36px;
+$medium: 24px;
+$normal: 18px;
+$small: 14px;
+$smallest: 12px;

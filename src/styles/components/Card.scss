@@ -1,0 +1,15 @@
+@import '../imports/variables';
+@import '../imports/mixins';
+
+.Card {
+  color: white;
+  display: flex;
+  align-items: flex-end;
+  border: none;
+  border-radius: 10px;
+  height: 340px;
+  width: 340px;
+  background: $gradient;
+  padding: 20px;
+  box-sizing: border-box;
+}

@@ -1,15 +1,16 @@
-import '../../styles/About.css';
+import '../../styles/pages/About.scss'
+import Dropdown from '../../components/Dropdown'
 
 function About() {
   return (
     <div>
-      <header>
-        <p>
-          Page à propos
-        </p>
-      </header>
+      <p>Ici l'image</p>
+      <Dropdown />
+      <Dropdown />
+      <Dropdown />
+      <Dropdown />
     </div>
-  );
+  )
 }
 
-export default About;
+export default About
