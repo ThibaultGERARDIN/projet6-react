@@ -1,7 +1,6 @@
 @import '../imports/variables';
 @import '../imports/mixins';
 
-
 /* styles pour la page d'acceuil */
 
 .Home {
@@ -41,4 +40,8 @@
     ),
     url(../../assets/home-banner.png);
   background-position: right center;
+}
+
+a {
+  text-decoration: none;
 }
