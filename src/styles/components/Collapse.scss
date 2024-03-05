@@ -1,0 +1,71 @@
+@import '../imports/variables';
+@import '../imports/mixins';
+
+.content {
+  background-color: $secondary-color;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.content-large {
+  width: 1023px;
+  padding: 10px 15px 10px 15px;
+  font-size: $normal;
+  font-weight: $light;
+}
+
+.content-medium {
+  width: 582px;
+  font-size: $normal;
+  font-weight: $light;
+  padding: 10px 20px 10px 10px;
+}
+
+.content-small {
+  width: 335px;
+  font-size: $smallest;
+  font-weight: $light;
+  padding: 10px 6px 10px 10px;
+}
+.content-parent {
+  height: 0px;
+  overflow: hidden;
+  transition: height ease 0.5s;
+}
+
+.Collapse {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $main-color;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.large {
+  width: 1023px;
+  height: 54px;
+  font-size: $medium;
+  font-weight: $bold;
+  padding: 10px 15px 10px 15px;
+}
+
+.medium {
+  width: 582px;
+  height: 52px;
+  font-size: $normal;
+  font-weight: $bold;
+  padding: 10px 20px 10px 10px;
+}
+
+.small {
+  width: 335px;
+  height: 30px;
+  font-size: 13px;
+  font-weight: $bold;
+  padding: 10px 6px 10px 10px;
+}

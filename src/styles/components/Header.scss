@@ -12,10 +12,13 @@
     display: flex;
     gap: 57px;
     a {
-      text-decoration: none;
       color: black;
       font-size: $medium;
       font-weight: $regular;
     }
   }
+}
+
+.highlight {
+  text-decoration: underline;
 }

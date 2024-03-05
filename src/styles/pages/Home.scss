@@ -24,24 +24,6 @@
   box-sizing: border-box;
 }
 
-.Home-banner {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 223px;
-  border: solid 1px black;
-  border-radius: 25px;
-  box-shadow: 0px 4px 4px 0px #00000040;
-  background-image: linear-gradient(
-      0deg,
-      rgba(0, 0, 0, 0.6),
-      rgba(0, 0, 0, 0.6)
-    ),
-    url(../../assets/home-banner.png);
-  background-position: right center;
-}
-
 a {
   text-decoration: none;
 }

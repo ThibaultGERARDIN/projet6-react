@@ -1,14 +1,14 @@
 import '../../styles/pages/Fiche.scss'
-import Banner from '../../components/Banner'
-import Dropdown from '../../components/Dropdown'
+import Carousel from '../../components/Carousel'
+import Collapse from '../../components/Collapse'
 
 function Fiche() {
   return (
     <div>
-      <Banner />
+      <Carousel />
       <div>Ensemble des infos (nom etc)</div>
-      <Dropdown />
-      <Dropdown />
+      <Collapse />
+      <Collapse />
     </div>
   )
 }

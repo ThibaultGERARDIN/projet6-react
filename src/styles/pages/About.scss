@@ -2,3 +2,10 @@
 @import '../imports/mixins';
 
 /* styles pour la page à propos */
+
+.About {
+  display: flex;
+  flex-direction: column;
+  gap: 38px;
+  align-items: center;
+}
