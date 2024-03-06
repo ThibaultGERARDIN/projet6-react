@@ -1,14 +1,64 @@
 import '../../styles/pages/Fiche.scss'
 import Carousel from '../../components/Carousel'
 import Collapse from '../../components/Collapse'
+import Tag from '../../components/Tag'
+import { useParams } from 'react-router-dom'
+let logements = require('../../logements.json')
 
 function Fiche() {
+  const logementId = useParams().logementId
+  console.log(logementId)
+
   return (
     <div>
-      <Carousel />
-      <div>Ensemble des infos (nom etc)</div>
-      <Collapse />
-      <Collapse />
+      {logements.map(
+        ({
+          id,
+          pictures,
+          title,
+          description,
+          tags,
+          host,
+          location,
+          equipments,
+          rating,
+        }) =>
+          logementId === id ? (
+            <div className="fiche" key={id}>
+              <Carousel data={pictures} />
+
+              <div className="info">
+                <div className="info-left">
+                  <h2>{title}</h2>
+                  <span>{location}</span>
+                  <Tag tags={tags} />
+                </div>
+                <div className="info-right">
+                  <div className="host">
+                    <p className="host-name">{host.name}</p>
+                    <img
+                      src={host.picture}
+                      alt="Votre hôte"
+                      className="host-img"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div className="fiche-collapse">
+                <Collapse size="medium" title="Description">
+                  {description}
+                </Collapse>
+                <Collapse size="medium" title="Équipements">
+                  <ul>
+                    {equipments.map((equipement) => (
+                      <li>{equipement}</li>
+                    ))}
+                  </ul>
+                </Collapse>
+              </div>
+            </div>
+          ) : null,
+      )}
     </div>
   )
 }

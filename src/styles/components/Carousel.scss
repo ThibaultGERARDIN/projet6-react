@@ -1,2 +1,49 @@
 @import '../imports/variables';
 @import '../imports/mixins';
+
+.Carousel {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1240px;
+  height: 415px;
+  border: none;
+  border-radius: 25px;
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+  object-fit: cover;
+}
+
+.slide-hidden {
+  display: none;
+  transition: 2s;
+}
+
+.arrow {
+  position: absolute;
+  width: 46.68px;
+  height: 79.2px;
+  color: white;
+}
+
+.arrow-left {
+  left: 20px;
+}
+
+.arrow-right {
+  right: 20px;
+}
+
+.slide-number {
+  text-align: center;
+  position: absolute;
+  bottom: 20px;
+  color: white;
+  font-size: $normal;
+  font-weight: $regular;
+}

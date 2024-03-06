@@ -1,0 +1,23 @@
+@import '../imports/variables';
+@import '../imports/mixins';
+
+.Tag {
+  display: flex;
+  gap: 5px;
+}
+
+.tag-txt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $main-color;
+  min-width: 115px;
+  height: 25px;
+  color: white;
+  font-size: $small;
+  font-weight: $bold;
+  border: 1px solid $main-color;
+  border-radius: 25px;
+  box-sizing: border-box;
+  padding: 0 10px;
+}

@@ -5,17 +5,16 @@ import '../../styles/components/Header.scss'
 function Header() {
   const location = useLocation()
   const currentLocation = location.pathname
-  console.log(currentLocation)
   return (
     <div className="Header">
       <img src={logo} alt="Logo Kasa" className="header-logo" />
       <nav>
-        <Link to="/" className={location.pathname === '/' ? 'highlight' : ''}>
+        <Link to="/" className={currentLocation === '/' ? 'highlight' : ''}>
           Accueil
         </Link>
         <Link
           to="/a-propos"
-          className={location.pathname === '/a-propos' ? 'highlight' : ''}
+          className={currentLocation === '/a-propos' ? 'highlight' : ''}
         >
           A propos
         </Link>

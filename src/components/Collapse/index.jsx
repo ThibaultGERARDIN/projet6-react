@@ -15,9 +15,9 @@ function Collapse(props) {
       <button onClick={toggle} className={`Collapse ${props.size}`}>
         {props.title}
         {!open ? (
-          <FontAwesomeIcon icon={faChevronDown} />
-        ) : (
           <FontAwesomeIcon icon={faChevronUp} />
+        ) : (
+          <FontAwesomeIcon icon={faChevronDown}  />
         )}
       </button>
       <div

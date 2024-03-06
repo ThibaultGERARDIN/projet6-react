@@ -2,3 +2,49 @@
 @import '../imports/mixins';
 
 /* styles pour la page de fiche logements */
+.fiche {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.info-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-right {
+  display: flex;
+  flex-direction: column;
+}
+
+.host {
+  display: flex;
+  gap: 10px;
+  .host-name {
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: end;
+    max-width: 93px;
+    color: $main-color;
+    font-size: $normal;
+    font-weight: $regular;
+  }
+  .host-img {
+    width: 64px;
+    height: 64px;
+    border-radius: 100%;
+  }
+}
+
+.fiche-collapse {
+  display: flex;
+  justify-content: space-between;
+}
