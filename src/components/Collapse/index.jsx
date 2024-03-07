@@ -1,6 +1,6 @@
 import '../../styles/components/Collapse.scss'
 import { useRef, useState } from 'react'
-import { faChevronUp, faChevronDown } from '@fortawesome/free-solid-svg-icons'
+import { faChevronUp } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 function Collapse(props) {
@@ -15,9 +15,9 @@ function Collapse(props) {
       <button onClick={toggle} className={`Collapse ${props.size}`}>
         {props.title}
         {!open ? (
-          <FontAwesomeIcon icon={faChevronUp} />
+          <FontAwesomeIcon icon={faChevronUp} className="chevron-open" />
         ) : (
-          <FontAwesomeIcon icon={faChevronDown}  />
+          <FontAwesomeIcon icon={faChevronUp} className="chevron-close" />
         )}
       </button>
       <div

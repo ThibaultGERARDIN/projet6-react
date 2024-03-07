@@ -1,0 +1,19 @@
+@import '../imports/variables';
+@import '../imports/mixins';
+
+.star-active {
+  font-size: $medium;
+  color: $main-color;
+}
+
+.star-inactive {
+  font-size: $medium;
+  color: #e3e3e3;
+}
+
+.Rating {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 10px;
+}

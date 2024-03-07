@@ -3,6 +3,8 @@
 
 .content {
   background-color: $secondary-color;
+  display: flex;
+  align-items: center;
   border: none;
   padding: 0.5rem;
   border-radius: 5px;
@@ -33,6 +35,15 @@
   height: 0px;
   overflow: hidden;
   transition: height ease 0.5s;
+}
+
+.chevron-open {
+  transition: 0.5s;
+}
+
+.chevron-close {
+  transform: rotate(-180deg);
+  transition: 0.5s;
 }
 
 .Collapse {

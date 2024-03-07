@@ -16,11 +16,13 @@
 .info-left {
   display: flex;
   flex-direction: column;
+  gap: 20px;
 }
 
 .info-right {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 
 .host {
@@ -47,4 +49,17 @@
 .fiche-collapse {
   display: flex;
   justify-content: space-between;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style-type: none;
+}
+
+span {
+  font-size: $normal;
+  font-weight: $regular;
 }
