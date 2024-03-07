@@ -17,6 +17,18 @@
       font-weight: $regular;
     }
   }
+  @media (max-width: 768px) {
+    img {
+      width: 145px;
+    }
+    nav {
+      gap: 22px;
+      a {
+        text-transform: uppercase;
+        font-size: $smallest;
+      }
+    }
+  }
 }
 
 .highlight {

@@ -8,8 +8,6 @@ let logements = require('../../logements.json')
 
 function Fiche() {
   const logementId = useParams().logementId
-  console.log(logementId)
-
   return (
     <div>
       {logements.map(

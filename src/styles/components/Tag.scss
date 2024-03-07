@@ -4,6 +4,9 @@
 .Tag {
   display: flex;
   gap: 5px;
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+  }
 }
 
 .tag-txt {
