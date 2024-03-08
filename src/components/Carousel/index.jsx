@@ -41,7 +41,7 @@ function Carousel({ data }) {
       {data.map((_, index) => {
         return (
           <span
-            className={slide === index ? 'slide-number' : 'slide slide-hidden'}
+            className={slide === index ? 'slide-number' : 'slide-number-hidden'}
             key={index}
           >
             {`${index + 1}/${data.length}`}
