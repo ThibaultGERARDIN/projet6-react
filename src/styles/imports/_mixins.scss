@@ -38,21 +38,21 @@
 @mixin row-js-ac {
   display: flex;
   flex-direction: row;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
 }
 
 @mixin row-js-ae {
   display: flex;
   flex-direction: row;
-  justify-content: start;
-  align-items: end;
+  justify-content: flex-start;
+  align-items: flex-end;
 }
 
 @mixin row-js-ac-w {
   display: flex;
   flex-direction: row;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
 }
@@ -60,7 +60,7 @@
 @mixin row-je-ac {
   display: flex;
   flex-direction: row;
-  justify-content: end;
+  justify-content: flex-end;
   align-items: center;
 }
 
