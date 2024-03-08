@@ -3,12 +3,14 @@ import Carousel from '../../components/Carousel'
 import Collapse from '../../components/Collapse'
 import Tag from '../../components/Tag'
 import Rating from '../../components/Rating'
-import { useParams } from 'react-router-dom'
+import { useParams, Navigate } from 'react-router-dom'
 let logements = require('../../logements.json')
 
 function Fiche() {
-  const logementId = useParams().logementId
-  return (
+  const currentLogementId = useParams().logementId
+  const allId = logements.map(({ id }) => id)
+
+  return allId.includes(currentLogementId) ? (
     <div>
       {logements.map(
         ({
@@ -22,7 +24,7 @@ function Fiche() {
           equipments,
           rating,
         }) =>
-          logementId === id ? (
+          currentLogementId === id ? (
             <div className="fiche" key={id}>
               <Carousel data={pictures} />
 
@@ -50,21 +52,27 @@ function Fiche() {
                 </div>
               </div>
               <div className="fiche-collapse">
-                <Collapse size="medium" title="Description">
-                  {description}
-                </Collapse>
-                <Collapse size="medium" title="Équipements">
-                  <ul>
-                    {equipments.map((equipement, index) => (
-                      <li key={index}>{equipement}</li>
-                    ))}
-                  </ul>
-                </Collapse>
+                <span className="span-collapse">
+                  <Collapse className="collapse" title="Description">
+                    {description}
+                  </Collapse>
+                </span>
+                <span className="span-collapse">
+                  <Collapse className="collapse" title="Équipements">
+                    <ul>
+                      {equipments.map((equipement, index) => (
+                        <li key={index}>{equipement}</li>
+                      ))}
+                    </ul>
+                  </Collapse>
+                </span>
               </div>
             </div>
           ) : null,
       )}
     </div>
+  ) : (
+    <Navigate to="/erreur404" replace={true} />
   )
 }
 

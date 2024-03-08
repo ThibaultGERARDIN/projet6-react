@@ -4,7 +4,6 @@
 /* styles du footer */
 
 .footer {
-    background-color: black;
-    display: flex;
-    justify-content: center; 
+  background-color: black;
+  @include row-jc-ac;
 }

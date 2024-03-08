@@ -1,5 +1,5 @@
 import '../../styles/components/Collapse.scss'
-import { useRef, useState, useEffect } from 'react'
+import { useRef, useState } from 'react'
 import { faChevronUp } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
@@ -9,28 +9,14 @@ function Collapse(props) {
   const toggle = () => {
     setOPen(!open)
   }
-  // vérifie si l'écran est <768 px (pour ajouter un passage de ligne dans le titre pour coller à la maquette)
-  const [isNarrowScreen, setIsNarrowScreen] = useState(false)
-  useEffect(() => {
-    const mobile = window.matchMedia('(max-width: 620px)')
-    setIsNarrowScreen(mobile.matches)
-    function updateIsNarrowScreen(e) {
-      setIsNarrowScreen(e.matches)
-    }
-    mobile.addEventListener('change', updateIsNarrowScreen)
-  })
-
   return (
     <div>
-      <button
-        onClick={toggle}
-        className={isNarrowScreen ? 'Collapse small' : `Collapse ${props.size}`}
-      >
+      <button onClick={toggle} className={'collapse collapse-button'}>
         {props.title}
         {!open ? (
-          <FontAwesomeIcon icon={faChevronUp} className="chevron-open" />
-        ) : (
           <FontAwesomeIcon icon={faChevronUp} className="chevron-close" />
+        ) : (
+          <FontAwesomeIcon icon={faChevronUp} className="chevron-open" />
         )}
       </button>
       <div
@@ -42,15 +28,7 @@ function Collapse(props) {
             : { height: '0px' }
         }
       >
-        <div
-          className={
-            isNarrowScreen
-              ? 'content content-small'
-              : `content content-${props.size}`
-          }
-        >
-          {props.children}
-        </div>
+        <div className={'collapse content'}>{props.children}</div>
       </div>
     </div>
   )

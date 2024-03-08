@@ -4,15 +4,11 @@
 /* styles du header */
 
 .Header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
+  @include row-jsb-ac;
   nav {
     display: flex;
     gap: 57px;
     a {
-      color: black;
       font-size: $medium;
       font-weight: $regular;
     }

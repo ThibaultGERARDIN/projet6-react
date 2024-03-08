@@ -11,16 +11,14 @@
 
 .star-inactive {
   font-size: $medium;
-  color: #e3e3e3;
+  color: $star-color;
   @media (max-width: 768px) {
     font-size: 13px;
   }
 }
 
 .Rating {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
+  @include row-je-ac;
   gap: 10px;
   @media (max-width: 768px) {
     gap: 5px;

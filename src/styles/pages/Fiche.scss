@@ -3,46 +3,40 @@
 
 /* styles pour la page de fiche logements */
 .fiche {
-  display: flex;
-  flex-direction: column;
+  @include col;
   gap: 40px;
-}
-
-.info {
-  display: flex;
-  justify-content: space-between;
   @media (max-width: 768px) {
-    flex-direction: column;
-
     gap: 22px;
-    padding-top: 20px;
   }
 }
 
-.info-left {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.info-right {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+.info {
+  @include row-jsb;
   @media (max-width: 768px) {
-    flex-direction: row-reverse;
-    align-items: center;
+    flex-direction: column;
+  }
+  @media (max-width: 400px) {
+    gap: 10px;
+  }
+  .info-left {
+    @include col;
+    gap: 20px;
+  }
+
+  .info-right {
+    @include col-jsb;
+    @media (max-width: 768px) {
+      flex-direction: row-reverse;
+      align-items: center;
+    }
   }
 }
 
 .host {
-  display: flex;
+  @include row;
   gap: 10px;
   .host-name {
-    margin: 0;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+    @include row-js-ac-w;
     text-align: end;
     max-width: 93px;
     color: $main-color;
@@ -65,24 +59,18 @@
 }
 
 .fiche-collapse {
-  display: flex;
-  justify-content: space-between;
+  @include row-jsb;
   @media (max-width: 1220px) {
     flex-direction: column;
     align-items: center;
+    align-self: center;
     gap: 20px;
   }
-}
-
-ul {
-  margin: 0;
-  padding: 0;
-}
-li {
-  list-style-type: none;
-}
-
-span {
-  font-size: $normal;
-  font-weight: $regular;
+  .span-collapse {
+    max-width: 582px;
+    width: 100%;
+    @media (max-width: 1220px) {
+      max-width: 1023px;
+    }
+  }
 }

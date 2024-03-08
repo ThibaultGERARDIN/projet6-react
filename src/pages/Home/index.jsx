@@ -17,7 +17,7 @@ function Home() {
       setIsNarrowScreen(e.matches)
     }
     mobile.addEventListener('change', updateIsNarrowScreen)
-  })
+  }, [])
 
   return (
     <div className="Home">

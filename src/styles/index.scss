@@ -2,17 +2,26 @@
 @import './imports/mixins';
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+// reset
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  box-sizing: border-box;
+}
+
+// propriétés générales
+
 body {
   margin: auto;
-  font-family: 'Montserrat', sans-serif;
   max-width: 1240px;
 }
 
 #root {
-  display: flex;
-  flex-direction: column;
+  @include col;
   gap: 50px;
-  padding: 45px 0 0 0;
+  padding-top: 45px;
   @media (max-width: 1280px) {
     padding-left: 20px;
     padding-right: 20px;
@@ -39,15 +48,27 @@ h1 {
 }
 
 h2 {
-  margin: 0;
   font-size: $big;
   font-weight: $regular;
   color: $main-color;
 }
 
 h3 {
-  margin: 0;
   font-size: $normal;
   font-weight: $bold;
   color: white;
+}
+
+li {
+  list-style-type: none;
+}
+
+span {
+  font-size: $normal;
+  font-weight: $regular;
+}
+
+a {
+  color: black;
+  text-decoration: none;
 }

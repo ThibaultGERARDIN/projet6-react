@@ -4,15 +4,34 @@
 /* styles pour la page erreur 404 */
 
 .Error {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @include col-ac;
   gap: 139px;
   padding: 139px 0;
+  @media (max-width: 768px) {
+    gap: 113px;
+    padding: 113px 0;
+  }
   a {
-    color: black;
     text-decoration: underline;
     font-size: $normal;
     font-weight: $regular;
+    @media (max-width: 768px) {
+      font-size: $small;
+    }
   }
+}
+
+.error-title {
+  text-align: center;
+  max-width: 90%;
+  @media (max-width: 768px) {
+    h2 {
+      font-size: $normal;
+    }
+  }
+}
+
+.error-img {
+  max-width: 597px;
+  width: 55%;
 }

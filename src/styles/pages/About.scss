@@ -4,8 +4,9 @@
 /* styles pour la page à propos */
 
 .About {
-  display: flex;
-  flex-direction: column;
+  @include col-ac;
   gap: 38px;
-  align-items: center;
+  @media (max-width: 768px) {
+    gap: 19px;
+  }
 }

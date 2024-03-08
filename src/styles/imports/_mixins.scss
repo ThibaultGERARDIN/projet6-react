@@ -1,2 +1,85 @@
 @import './variables';
 
+// flex column mixins j=justify content / a=align-items
+// c=center / s=start / e=end / sa=space-around / sb=space-between
+
+@mixin col {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin col-ac {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@mixin col-jsb {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+// flex row mixins j=justify content / a=align-items / w=wrap
+// c=center / s=start / e=end / sa=space-around / sb=space-between
+
+@mixin row {
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin row-jc-ac {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin row-js-ac {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+}
+
+@mixin row-js-ae {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: end;
+}
+
+@mixin row-js-ac-w {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+@mixin row-je-ac {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+}
+
+@mixin row-jsb-ac {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin row-jsb {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+@mixin row-jsa-w {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
