@@ -15,7 +15,7 @@ function Carousel({ data }) {
     setSlide(slide === 0 ? data.length - 1 : slide - 1)
   }
 
-  return (
+  return data.length > 1 ? (
     <div className="Carousel">
       <FontAwesomeIcon
         className="arrow arrow-left"
@@ -46,6 +46,19 @@ function Carousel({ data }) {
           >
             {`${index + 1}/${data.length}`}
           </span>
+        )
+      })}
+    </div>
+  ) : (
+    <div className="Carousel">
+      {data.map((item, index) => {
+        return (
+          <img
+            src={item}
+            alt="Photos de l'appartement"
+            key={index}
+            className={slide === index ? 'slide' : 'slide slide-hidden'}
+          />
         )
       })}
     </div>
