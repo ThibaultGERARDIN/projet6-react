@@ -7,11 +7,10 @@ import { useParams, Navigate } from 'react-router-dom'
 let logements = require('../../logements.json')
 
 function Fiche() {
-  const currentLogementId = useParams().logementId
-  const allId = logements.map(({ id }) => id)
-  const currentLogement = logements.find(({ id }) => id === currentLogementId)
+  const { logementId } = useParams()
+  const currentLogement = logements.find(({ id }) => id === logementId)
 
-  return allId.includes(currentLogementId) ? (
+  return currentLogement ? (
     <div>
       <div className="fiche" key={currentLogement.id}>
         <Carousel data={currentLogement.pictures} />
