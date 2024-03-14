@@ -4,6 +4,8 @@
 /* styles du footer */
 
 .footer {
+  align-self: center;
+  width: 1440px;
   background-color: black;
   @include row-jc-ac;
 }
